@@ -1,29 +1,22 @@
 [package]
-name = "template-rs"
+name = "mpegoat"
 version = "0.0.0"
-edition = "2021"
-repository = "https://github.com/al8n/template-rs"
-homepage = "https://github.com/al8n/template-rs"
-documentation = "https://docs.rs/template-rs"
-description = "A template for creating Rust open-source repo on GitHub"
+edition = "2024"
+repository = "https://github.com/findit-studio/mpegoat"
+homepage = "https://github.com/findit-studio/mpegoat"
+documentation = "https://docs.rs/mpegoat"
+description = "A pure-Rust MPEG audio elementary-stream writer (MP1/MP2/MP3): streaming, constant memory, with the Xing/LAME frame and ID3 tags."
 license = "MIT OR Apache-2.0"
-rust-version = "1.73"
-
-[[bench]]
-path = "benches/foo.rs"
-name = "foo"
-harness = false
+rust-version = "1.95"
+keywords = ["mpeg", "mp3", "id3", "audio", "muxer"]
+categories = ["multimedia", "multimedia::audio", "multimedia::encoding", "parser-implementations", "no-std"]
 
 [features]
 default = ["std"]
 alloc = []
-std = []
+std = ["alloc"]
 
 [dependencies]
-
-[dev-dependencies]
-criterion = "0.8"
-tempfile = "3"
 
 [profile.bench]
 opt-level = 3
